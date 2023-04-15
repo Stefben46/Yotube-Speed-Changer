@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="UTF-8"> <title>Current Video Speed</title> 
+    <style> body { 
+      background-color: #444; 
+      color: #333; 
+      font-family: sans-serif; 
+      font-size: 18px; 
+      line-height: 1.6; 
+      padding: 20px; 
+      width: 250px; 
+      height: 180px; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; } 
+      .popup-box { 
+        background-color: #ae3e3e; 
+        border-radius: 8px; 
+        padding: 30px; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; } 
+      h1 { 
+        font-size: 16px; 
+        margin-top: 0; 
+        margin-bottom: 10px; 
+        color: #FFFFFF; } 
+      #speed-display { 
+        font-size: 14px; 
+        margin-top: 20px; 
+        margin-bottom: 10px;
+        color: #FFFFFF; } 
+      i {
+        font-size: 14px; 
+        margin-top: 10px; 
+        margin-bottom: 10px;
+        color: #FFFFFF;
+      }
+      .controls select { 
+        background-color: #333333; 
+        color: #FFFFFF; border: none; 
+        padding: 8px 12px; 
+        border-radius: 4px; 
+        margin-right: 10px; } 
+      .controls button { 
+        background-color: #444; 
+        color: #FFFFFF; border: none; 
+        padding: 8px 12px; 
+        border-radius: 4px; 
+        cursor: pointer; } 
+      .controls button:hover{
+        background-color: #333;
+      }
+    </style> 
+    </head> 
+    <body> 
+      <div class="popup-box"> 
+        <h1>YouTube Video Speed</h1> 
+        <div id="speed-display"></div> 
+        <i>Set Speed<i>
+        <div class="controls"> 
+          <select id="speed-select"> 
+            <option value="0.25">0.25x</option> 
+            <option value="0.75">0.75x</option> 
+            <option value="1" selected>Default</option> 
+            <option value="1.25">1.25x</option> 
+            <option value="1.5">1.5x</option> 
+            <option value="2">2x</option> </select> 
+            <button id="save-button">Save</button> 
+          </div> 
+        </div>
+  <script src="popup.js"></script>
+  
+  <style>
+    .controls select,
+    .controls button {
+      display: inline-block;
+    }
+  </style>
+  </body> </html>

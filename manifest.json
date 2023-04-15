@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Automatic Play Speed For YouTube™",
+  "version": "1.3",
+  "description": "Easily set a playback speed for any YouTube video you watch, and the settings will be saved for future viewings as well.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Automatic Play Speed For YouTube™",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "64": "icon64.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html"
+    
+  }
+}
